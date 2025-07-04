@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - La Balai</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-light d-flex align-items-center justify-content-center"
+    style="
+      min-height: 100vh;
+      background: url('https://i.imgur.com/HDW8DhB.jpg') no-repeat center
+        center/cover;
+    "
+  >
+    <div
+      class="card shadow-lg p-4 mt-5 rounded-4 glass-card"
+      style="
+        width: 100%;
+        max-width: 420px;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.9);
+      "
+    >
+      <!-- Logo + Title -->
+      <div class="text-center mb-3">
+        <img
+          src="logo.jpg"
+          alt="La Balai Logo"
+          width="60"
+          class="mb-2 rounded-circle"
+        />
+        <h4 class="fw-bold text-success">Welcome to La Balai</h4>
+      </div>
+
+      <!-- Form Title (change per page) -->
+      <h5 class="mb-3 text-center">Sign Up</h5>
+
+      <!-- Form Start -->
+      <form id="signupForm">
+        <div class="mb-3">
+          <label>Full Name</label>
+          <input type="text" class="form-control rounded-pill" required />
+        </div>
+        <div class="mb-3">
+          <label for="signupEmail" class="form-label">Email Address</label>
+          <input
+            type="email"
+            class="form-control rounded-pill"
+            id="signupEmail"
+            name="email"
+            required
+          />
+          <small id="emailNote" class="text-muted fst-italic d-none">
+            This email is linked to your recent booking and cannot be changed.
+          </small>
+        </div>
+
+        <div class="mb-3">
+          <label>Password</label>
+          <input type="password" class="form-control rounded-pill" required />
+        </div>
+        <div class="d-grid">
+          <button class="btn btn-success">Create Account</button>
+        </div>
+      </form>
+
+      <div class="text-center mt-3">
+        <small
+          >Already have an account?
+          <a href="login.html" class="text-success">Sign in</a></small
+        >
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="index.html" class="text-decoration-none text-muted">
+          ← Back to Home
+        </a>
+      </div>
+    </div>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const emailInput = document.getElementById("signupEmail");
+        const note = document.getElementById("emailNote");
+        const savedEmail = localStorage.getItem("bookingEmail");
+
+        if (savedEmail && emailInput) {
+          emailInput.value = savedEmail;
+          emailInput.readOnly = true;
+          note.classList.remove("d-none");
+          localStorage.removeItem("bookingEmail");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Balai Staycation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-3"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center fw-bold text-success"
+          href="index.html"
+        >
+          <img
+            src="images/logo.jpg"
+            alt="La Balai Logo"
+            width="40"
+            height="40"
+            class="me-2 rounded-circle"
+          />
+          La Balai
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#rooms">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#testimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="booking.html">Booking</a>
+            </li>
+          </ul>
+          <a href="login.html" class="btn btn-success rounded-pill ms-3 px-4"
+            >Sign In</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- Hero Section -->
+      <header
+        class="hero-section d-flex flex-column align-items-center justify-content-center text-white text-center pb-5"
+        id="hero"
+      >
+        <div>
+          <h1 class="display-4 fw-bold typing-text">Welcome to La Balai</h1>
+          <p class="lead">Your Bali-like escape in Ilocos Sur</p>
+          <a href="#about" class="btn btn-light mt-3">Explore</a>
+        </div>
+      </header>
+
+      <!-- About Section -->
+      <section id="about" class="py-5 bg-white" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <img
+                src="images/about.jpg"
+                class="img-fluid rounded-4 about-img shadow"
+                alt="Villa view"
+              />
+            </div>
+            <div class="col-md-6">
+              <h2 class="section-title text-center fw-bold text-success mb-3">
+                📖 About La Balai
+              </h2>
+              <p>
+                A family-owned Bali-like accommodations located in Barangay
+                Sitio Quimarayan, Caterman, Candon, Ilocos Sur. It is 15 minutes
+                drive from City proper and 10 minutes to Vitalis Villas,
+                Santiago.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rooms Section -->
+      <section id="rooms" class="bg-light py-5" data-aos="fade-up">
+        <div class="container">
+          <h2 class="section-title text-center fw-bold text-success mb-3">
+            🛏️ Our Rooms
+          </h2>
+          <div class="row g-4">
+            <!-- Room 1 -->
+            <div class="col-md-4">
+              <div class="card shadow-sm h-100">
+                <img
+                  src="images/dingle.jpg"
+                  class="card-img-top"
+                  alt="Room 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Dingle</h5>
+                  <p class="card-text">
+                    /Insert a description of the room here./
+                  </p>
+                  <ul class="list-unstyled small text-muted">
+                    <li>🛏️ Up to 4 Guests</li>
+                    <li>🌊 Private Pool</li>
+                    <li>🌐 Free Wi-Fi</li>
+                    <li>🌡️ Air Conditioning</li>
+                    <li>🥞 Breakfast</li>
+                    <li>🧻 Toiletries</li>
+                  </ul>
+                  <div class="row">
+                    <div class="small">
+                      <p class="text-success fw-bold m-0">Weekday Rates</p>
+                      <p class="text-muted m-0">₱2,999 / night - 2 Guests</p>
+                      <p class="text-muted m-0">₱3,100 / night - 3 Guests</p>
+                      <p class="text-muted m-0 mb-2">
+                        ₱3,500 / night - 4 Guests
+                      </p>
+                    </div>
+                    <div class="small">
+                      <p class="text-success fw-bold m-0">Weekend Rates</p>
+                      <p class="text-muted m-0">₱3,200 / night - 2 Guests</p>
+                      <p class="text-muted m-0">₱3,400 / night - 3 Guests</p>
+                      <p class="text-muted m-0 mb-2">
+                        ₱4,100 / night - 4 Guests
+                      </p>
+                    </div>
+                  </div>
+                  <a href="booking.html" class="btn btn-outline-success w-100"
+                    >Book Now</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="col-md-4">
+              <div class="card shadow-sm h-100">
+                <img src="images/gra.jpg" class="card-img-top" alt="Room 2" />
+                <div class="card-body">
+                  <h5 class="card-title">Gra</h5>
+                  <p class="card-text">
+                    /Insert a description of the room here./
+                  </p>
+                  <ul class="list-unstyled small text-muted">
+                    <li>🛏️ Up to 4 Guests</li>
+                    <li>🌊 Private Pool</li>
+                    <li>🌐 Free Wi-Fi</li>
+                    <li>🌡️ Air Conditioning</li>
+                    <li>🥞 Breakfast</li>
+                    <li>🧻 Toiletries</li>
+                  </ul>
+                  <div class="row">
+                    <div class="small">
+                      <p class="text-success fw-bold m-0">Weekday Rates</p>
+                      <p class="text-muted m-0">₱2,999 / night - 2 Guests</p>
+                      <p class="text-muted m-0">₱3,100 / night - 3 Guests</p>
+                      <p class="text-muted m-0 mb-2">
+                        ₱3,300 / night - 4 Guests
+                      </p>
+                    </div>
+                    <div class="small">
+                      <p class="text-success fw-bold m-0">Weekend Rates</p>
+                      <p class="text-muted m-0">₱3,150 / night - 2 Guests</p>
+                      <p class="text-muted m-0">₱3,250 / night - 3 Guests</p>
+                      <p class="text-muted m-0 mb-2">
+                        ₱3,800 / night - 4 Guests
+                      </p>
+                    </div>
+                  </div>
+                  <a href="booking.html" class="btn btn-outline-success w-100"
+                    >Book Now</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="col-md-4">
+              <div class="card shadow-sm h-100">
+                <img
+                  src="images/abhaile.jpg"
+                  class="card-img-top"
+                  alt="Room 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Abhaile</h5>
+                  <p class="card-text">
+                    /Insert a description of the room here./
+                  </p>
+                  <ul class="list-unstyled small text-muted">
+                    <li>🛏️ 1 Queen Bed</li>
+                    <li>🌊 Private Pool</li>
+                    <li>🌐 Free Wi-Fi</li>
+                    <li>🌡️ Air Conditioning</li>
+                    <li>🥞 Breakfast</li>
+                    <li>🧻 Toiletries</li>
+                  </ul>
+                  <div class="row">
+                    <div class="small">
+                      <p class="text-success fw-bold m-0">Weekday Rates</p>
+                      <p class="text-muted m-0">₱2,999 / night - 2 Guests</p>
+                      <p class="m-0 text-white">..</p>
+                      <p class="m-0 text-white mb-2">..</p>
+                    </div>
+                    <div class="small">
+                      <p class="text-success fw-bold m-0">Weekend Rates</p>
+                      <p class="text-muted m-0">₱3,199 / night - 2 Guests</p>
+                      <p class="m-0 text-white">..</p>
+                      <p class="m-0 text-white mb-2">..</p>
+                    </div>
+                  </div>
+                  <a href="booking.html" class="btn btn-outline-success w-100"
+                    >Book Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="py-5 bg-white" data-aos="fade-up">
+        <div class="container">
+          <h2 class="section-title text-center fw-bold text-success mb-3">
+            🖼️ Gallery
+          </h2>
+          <div class="row g-3">
+            <div class="col-6 col-md-4">
+              <a
+                href="images/gallery/14.jpg"
+                class="glightbox"
+                data-gallery="balai-gallery"
+              >
+                <img
+                  src="images/gallery/14.jpg"
+                  class="img-fluid rounded shadow-sm"
+                  alt="Gallery 1"
+                />
+              </a>
+            </div>
+
+            <div class="col-6 col-md-4">
+              <a
+                href="images/gallery/2.jpg"
+                class="glightbox"
+                data-gallery="balai-gallery"
+              >
+                <img
+                  src="images/gallery/2.jpg"
+                  class="img-fluid rounded shadow-sm"
+                  alt="Gallery 2"
+                />
+              </a>
+            </div>
+
+            <div class="col-6 col-md-4">
+              <a
+                href="images/gallery/6.jpg"
+                class="glightbox"
+                data-gallery="balai-gallery"
+              >
+                <img
+                  src="images/gallery/4.jpg"
+                  class="img-fluid rounded shadow-sm"
+                  alt="Gallery 3"
+                />
+              </a>
+            </div>
+
+            <div class="col-6 col-md-4">
+              <a
+                href="images/gallery/8.jpg"
+                class="glightbox"
+                data-gallery="balai-gallery"
+              >
+                <img
+                  src="images/gallery/8.jpg"
+                  class="img-fluid rounded shadow-sm"
+                  alt="Gallery 4"
+                />
+              </a>
+            </div>
+
+            <div class="col-6 col-md-4">
+              <a
+                href="images/gallery/1.jpg"
+                class="glightbox"
+                data-gallery="balai-gallery"
+              >
+                <img
+                  src="images/gallery/1.jpg"
+                  class="img-fluid rounded shadow-sm"
+                  alt="Gallery 5"
+                />
+              </a>
+            </div>
+
+            <div class="col-6 col-md-4">
+              <a
+                href="images/gallery/11.jpg"
+                class="glightbox"
+                data-gallery="balai-gallery"
+              >
+                <img
+                  src="images/gallery/11.jpg"
+                  class="img-fluid rounded shadow-sm"
+                  alt="Gallery 6"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- See More Button -->
+          <div class="text-center mt-4">
+            <a
+              href="gallery.php"
+              class="btn btn-outline-success px-4 rounded-pill"
+              >See More Photos</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="bg-light py-5" data-aos="fade-up">
+        <div class="container">
+          <h2 class="section-title text-center fw-bold text-success mb-3">
+            🗣️ What Our Guests Say
+          </h2>
+          <div class="row g-4">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <p class="card-text">
+                    “La Balai is the perfect peaceful escape. The bamboo villa
+                    was cozy and the staff were incredibly kind. Will definitely
+                    come back!”
+                  </p>
+                  <div class="d-flex align-items-center mt-4">
+                    <div>
+                      <h6 class="mb-0">Maria L.</h6>
+                      <small class="text-muted">From Quezon City</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="col-md-4">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <p class="card-text">
+                    “We loved the ambiance, parang nasa Bali talaga! Great
+                    views, clean rooms, and very relaxing. Sulit ang stay!”
+                  </p>
+                  <div class="d-flex align-items-center mt-4">
+                    <div>
+                      <h6 class="mb-0">Jomar V.</h6>
+                      <small class="text-muted">From Baguio City</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="col-md-4">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <p class="card-text">
+                    “Very Instagrammable and peaceful! Perfect for couples or
+                    solo travelers who want to reconnect with nature. Super
+                    ganda ng vibe.”
+                  </p>
+                  <div class="d-flex align-items-center mt-4">
+                    <div>
+                      <h6 class="mb-0">Aileen R.</h6>
+                      <small class="text-muted">From Manila</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- See More Button -->
+          <div class="text-center mt-4">
+            <a
+              href="testimonials.html"
+              class="btn btn-outline-success px-4 rounded-pill"
+              >See More Testimonials</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="featured-video" class="py-5 bg-white">
+        <div class="container text-center">
+          <h2 class="mb-3 fw-bold text-success">🎬 Featured Video</h2>
+          <p class="mb-4">Take a glimpse of the La Balai experience!</p>
+
+          <div class="mx-auto" style="max-width: 400px">
+            <div class="rounded shadow overflow-hidden">
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FSirChadH%2Fvideos%2F1746531139585068%2F&show_text=false&autoplay=1&mute=1&loop=1"
+                width="400"
+                height="710"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              >
+              </iframe>
+            </div>
+          </div>
+          <p class="text-muted mt-3" style="font-size: 0.9rem">
+            🎥 Credit:
+            <a
+              href="https://www.facebook.com/SirChadH/videos/1746531139585068"
+              target="_blank"
+              class="text-decoration-none text-success fw-medium"
+            >
+              Chad Hernandez on Facebook
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <!-- About -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">La Balai Staycation</h5>
+            <p class="small">
+              A Bali-inspired escape in Sitio Quimarayan, Caterman, Candon,
+              Ilocos Sur.
+            </p>
+            <p class="small mb-0">
+              📍 15 mins from City Proper • 10 mins to Vitalis Villas
+            </p>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-md-4 mb-4">
+            <h6>Contact Us</h6>
+            <p class="small mb-1">📞 0935 591 2658</p>
+            <p class="small mb-1">✉️ /insert email address/</p>
+            <p class="small">📍 Sitio Quimarayan, Caterman, Candon City</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-4 mb-4">
+            <h6>Quick Links</h6>
+            <ul class="list-unstyled small">
+              <li>
+                <a href="#about" class="text-white text-decoration-none"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="#rooms" class="text-white text-decoration-none"
+                  >Rooms</a
+                >
+              </li>
+              <li>
+                <a href="#gallery" class="text-white text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a href="#testimonials" class="text-white text-decoration-none"
+                  >Testimonial</a
+                >
+              </li>
+              <li>
+                <a href="booking.html" class="text-white text-decoration-none"
+                  >Booking</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center mt-3 border-top pt-3 small">
+          &copy; 2025 La Balai Staycation. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+      const lightbox = GLightbox({ selector: ".glightbox" });
+    </script>
+    <script>
+      const toggle = document.getElementById("toggleDark");
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        localStorage.setItem(
+          "dark-mode",
+          document.body.classList.contains("dark-mode")
+        );
+      });
+
+      // Apply saved theme
+      if (localStorage.getItem("dark-mode") === "true") {
+        document.body.classList.add("dark-mode");
+      }
+    </script>
+  </body>
+</html>
