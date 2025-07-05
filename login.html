@@ -9,76 +9,87 @@
       rel="stylesheet"
     />
   </head>
-  <body
-    class="bg-light d-flex align-items-center justify-content-center"
-    style="
-      min-height: 100vh;
-      background: url('https://picsum.photos/seed/room1/600/400') no-repeat
-        center center/cover;
-    "
-  >
+  <body class="position-relative">
+    <!-- Blurred Background Layer -->
     <div
-      class="card shadow-lg p-4 rounded-4 glass-card"
+      class="bg-blur position-fixed top-0 start-0 w-100 h-100"
       style="
-        width: 100%;
-        max-width: 420px;
-        backdrop-filter: blur(10px);
-        background: rgba(255, 255, 255, 0.9);
+        background: url('images/gra.jpg') no-repeat center center/cover;
+        filter: blur(10px);
+        z-index: 0;
       "
+    ></div>
+
+    <!-- Content Layer -->
+    <div
+      class="d-flex align-items-center justify-content-center min-vh-100"
+      style="position: relative; z-index: 1"
     >
-      <!-- Logo + Title -->
-      <div class="text-center mb-3">
-        <img
-          src="logo.jpg"
-          alt="La Balai Logo"
-          width="60"
-          class="mb-2 rounded-circle"
-        />
-        <h4 class="fw-bold text-success">Welcome to La Balai</h4>
-      </div>
-
-      <!-- Form Title (change per page) -->
-      <h5 class="mb-3 text-center">Sign In</h5>
-
-      <!-- Form Start -->
-      <form id="loginForm">
-        <div class="mb-3">
-          <label>Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="you@email.com"
-            required
+      <div
+        class="card shadow-lg p-4 rounded-4 glass-card w-100"
+        style="
+          max-width: 420px;
+          backdrop-filter: blur(16px);
+          background: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+        "
+      >
+        <!-- Logo + Title -->
+        <div class="text-center mb-3">
+          <img
+            src="images/logo.jpg"
+            alt="La Balai Logo"
+            width="60"
+            class="mb-2 rounded-circle shadow"
           />
+          <h4 class="fw-bold text-success">Welcome to La Balai</h4>
         </div>
-        <div class="mb-3">
-          <label>Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            placeholder="••••••••"
-            required
-          />
-        </div>
-        <div class="d-grid">
-          <button class="btn btn-success">Sign In</button>
-        </div>
-      </form>
 
-      <!-- Switch Links -->
-      <div class="text-center mt-3">
-        <small
-          >Don't have an account?
-          <a href="signup.html" class="text-success">Sign up</a></small
-        >
-      </div>
+        <!-- Form Title -->
+        <h5 class="mb-3 text-center">Sign In</h5>
 
-      <div class="text-center mt-3">
-        <a href="index.html" class="text-decoration-none text-muted">
-          ← Back to Home
-        </a>
+        <!-- Form Start -->
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control rounded-pill"
+              id="email"
+              placeholder="you@email.com"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control rounded-pill"
+              id="password"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+          <div class="d-grid">
+            <button class="btn btn-success rounded-pill">Sign In</button>
+          </div>
+        </form>
+
+        <!-- Switch Links -->
+        <div class="text-center mt-3">
+          <small>
+            Don't have an account?
+            <a href="signup.html" class="text-success text-decoration-none"
+              >Sign up</a
+            >
+          </small>
+        </div>
+
+        <div class="text-center mt-3">
+          <a href="index.html" class="text-decoration-none text-muted">
+            ← Back to Home
+          </a>
+        </div>
       </div>
     </div>
 

@@ -9,79 +9,108 @@
       rel="stylesheet"
     />
   </head>
-  <body
-    class="bg-light d-flex align-items-center justify-content-center"
-    style="
-      min-height: 100vh;
-      background: url('https://i.imgur.com/HDW8DhB.jpg') no-repeat center
-        center/cover;
-    "
-  >
+  <body class="position-relative bg-light">
+    <!-- Blurred Background Layer -->
     <div
-      class="card shadow-lg p-4 mt-5 rounded-4 glass-card"
+      class="position-fixed top-0 start-0 w-100 h-100"
       style="
-        width: 100%;
-        max-width: 420px;
-        backdrop-filter: blur(10px);
-        background: rgba(255, 255, 255, 0.9);
+        background: url('images/gallery/5.jpg') no-repeat center center/cover;
+        filter: blur(10px);
+        z-index: 0;
       "
+    ></div>
+
+    <!-- Centered Card Wrapper -->
+    <div
+      class="container d-flex align-items-center justify-content-center min-vh-100"
+      style="position: relative; z-index: 1"
     >
-      <!-- Logo + Title -->
-      <div class="text-center mb-3">
-        <img
-          src="logo.jpg"
-          alt="La Balai Logo"
-          width="60"
-          class="mb-2 rounded-circle"
-        />
-        <h4 class="fw-bold text-success">Welcome to La Balai</h4>
-      </div>
-
-      <!-- Form Title (change per page) -->
-      <h5 class="mb-3 text-center">Sign Up</h5>
-
-      <!-- Form Start -->
-      <form id="signupForm">
-        <div class="mb-3">
-          <label>Full Name</label>
-          <input type="text" class="form-control rounded-pill" required />
-        </div>
-        <div class="mb-3">
-          <label for="signupEmail" class="form-label">Email Address</label>
-          <input
-            type="email"
-            class="form-control rounded-pill"
-            id="signupEmail"
-            name="email"
-            required
+      <div
+        class="card shadow-lg p-4 rounded-4 glass-card w-100"
+        style="
+          max-width: 420px;
+          backdrop-filter: blur(14px);
+          background: rgba(255, 255, 255, 0.85);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+        "
+      >
+        <!-- Logo + Title -->
+        <div class="text-center mb-3">
+          <img
+            src="images/logo.jpg"
+            alt="La Balai Logo"
+            width="60"
+            class="mb-2 rounded-circle shadow-sm"
           />
-          <small id="emailNote" class="text-muted fst-italic d-none">
-            This email is linked to your recent booking and cannot be changed.
+          <h4 class="fw-bold text-success">Welcome to La Balai</h4>
+        </div>
+
+        <!-- Form Title -->
+        <h5 class="mb-3 text-center">Sign Up</h5>
+
+        <!-- Signup Form -->
+        <form id="signupForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control rounded-pill"
+              placeholder="Juan Dela Cruz"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="signupEmail" class="form-label">Email Address</label>
+            <input
+              type="email"
+              class="form-control rounded-pill"
+              id="signupEmail"
+              name="email"
+              placeholder="you@email.com"
+              required
+            />
+            <small id="emailNote" class="text-muted fst-italic d-none">
+              This email is linked to your recent booking and cannot be changed.
+            </small>
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form-control rounded-pill"
+              placeholder="Enter a strong password"
+              required
+            />
+          </div>
+
+          <div class="d-grid">
+            <button class="btn btn-success rounded-pill">Create Account</button>
+          </div>
+        </form>
+
+        <!-- Switch Links -->
+        <div class="text-center mt-3">
+          <small>
+            Already have an account?
+            <a href="login.html" class="text-success text-decoration-none"
+              >Sign in</a
+            >
           </small>
         </div>
 
-        <div class="mb-3">
-          <label>Password</label>
-          <input type="password" class="form-control rounded-pill" required />
+        <div class="text-center mt-3">
+          <a href="index.html" class="text-decoration-none text-muted">
+            ← Back to Home
+          </a>
         </div>
-        <div class="d-grid">
-          <button class="btn btn-success">Create Account</button>
-        </div>
-      </form>
-
-      <div class="text-center mt-3">
-        <small
-          >Already have an account?
-          <a href="login.html" class="text-success">Sign in</a></small
-        >
-      </div>
-
-      <div class="text-center mt-3">
-        <a href="index.html" class="text-decoration-none text-muted">
-          ← Back to Home
-        </a>
       </div>
     </div>
+
+    <!-- Prefill Booking Email Script -->
     <script>
       window.addEventListener("DOMContentLoaded", function () {
         const emailInput = document.getElementById("signupEmail");
